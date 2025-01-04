@@ -1,20 +1,5 @@
 #In Git-Terra
 
-terraform apply --auto-approve
-
-```
-#output
- # aws_instance.web-1 will be created
-  + resource "aws_instance" "web-1" {
-```
-```
-change key_name = "bhavna-ke"
-
-#output
-  # aws_instance.web-1 must be replaced
-**-/+ resource "aws_instance" "web-1" {**
-
-```
 ```
 resource "aws_instance" "web-1" {
   ami                         = "ami-0e2c8caa4b6378d8c"
@@ -33,7 +18,22 @@ resource "aws_instance" "web-1" {
 }
 ```
 
+terraform apply --auto-approve
 
+```
+#output
+ # aws_instance.web-1 will be created
+  + resource "aws_instance" "web-1" {
+```
+```
+change key_name = "bhavna-ke"
+
+#output
+  # aws_instance.web-1 must be replaced
+-/+ resource "aws_instance" "web-1" {
+
+Means first it will destroy, then create.
+```
 
 ```
 resource "aws_instance" "web-1" {
