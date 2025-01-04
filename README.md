@@ -2,6 +2,11 @@
 
 terraform apply --auto-approve
 
+```
+#output
+ # aws_instance.web-1 will be created
+  + resource "aws_instance" "web-1" {
+```
 
 ```
 resource "aws_instance" "web-1" {
