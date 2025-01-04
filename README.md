@@ -56,4 +56,13 @@ resource "aws_instance" "web-1" {
 }
 
 ```
+terraform apply --auto-approve
 
+```
+#output
+
+  # aws_instance.web-1 must be replaced
++/- resource "aws_instance" "web-1" {
+
+Means first it will create, then destroy.
+```
