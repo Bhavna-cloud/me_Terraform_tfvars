@@ -7,7 +7,14 @@ terraform apply --auto-approve
  # aws_instance.web-1 will be created
   + resource "aws_instance" "web-1" {
 ```
+```
+change key_name = "bhavna-ke"
 
+#output
+  # aws_instance.web-1 must be replaced
+**-/+ resource "aws_instance" "web-1" {**
+
+```
 ```
 resource "aws_instance" "web-1" {
   ami                         = "ami-0e2c8caa4b6378d8c"
