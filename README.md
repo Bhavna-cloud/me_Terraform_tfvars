@@ -64,5 +64,13 @@ terraform apply --auto-approve
   # aws_instance.web-1 must be replaced
 +/- resource "aws_instance" "web-1" {
 
-Means first it will create, then destroy.
+Means first it will create , then destroy.
+```
+```
+lifecycle {
+    prevent_destroy = true
+  }
+
+Means we cannot destroy the instance. We can use it for critical servers
+
 ```
