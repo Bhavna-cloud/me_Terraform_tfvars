@@ -2,7 +2,7 @@ resource "aws_instance" "web-1" {
   ami                         = "ami-0e2c8caa4b6378d8c"
   availability_zone            = "us-east-1a"
   instance_type                = "t2.micro"
-  key_name                     = "bhavna-key"
+  key_name                     = "bhavna-key"    #Try code with bhavna-ke
   subnet_id                    = aws_subnet.public.id
   vpc_security_group_ids       = ["${aws_security_group.allow_all.id}"]
   associate_public_ip_address  = true
